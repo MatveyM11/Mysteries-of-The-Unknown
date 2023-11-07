@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsm3t1acuuiv6"
+path="res://.godot/imported/28. Прибой.mp3-20c1030dc0b3a8f16092a2e9ca704f66.mp3str"
+
+[deps]
+
+source_file="res://music/28. Прибой.mp3"
+dest_files=["res://.godot/imported/28. Прибой.mp3-20c1030dc0b3a8f16092a2e9ca704f66.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
