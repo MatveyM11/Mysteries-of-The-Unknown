@@ -1,0 +1,293 @@
+[gd_scene load_steps=29 format=3 uid="uid://c4qw3cb4e0y1c"]
+
+[ext_resource type="Texture2D" uid="uid://ckyxtbfb8l5a3" path="res://Group 49.png" id="1_fkkt6"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_3qek0"]
+[ext_resource type="Texture2D" uid="uid://b7mjijhdfe5ys" path="res://assets/Трейлер.png" id="2_do2t4"]
+[ext_resource type="Texture2D" uid="uid://bljkccnkvtft5" path="res://animations/anim11.png" id="4_5g5xs"]
+[ext_resource type="Texture2D" uid="uid://bks0subsy3hpk" path="res://animations/anim1.png" id="5_vfrgl"]
+[ext_resource type="Texture2D" uid="uid://c7dqcf6ugfjls" path="res://animations/anim2.png" id="6_dok2p"]
+[ext_resource type="Texture2D" uid="uid://d1p8bq26e7443" path="res://assets/Дорога.png" id="6_wbq43"]
+[ext_resource type="Texture2D" uid="uid://qjtr8dhpcyid" path="res://animations/anim6.png" id="7_7rbnb"]
+[ext_resource type="Texture2D" uid="uid://b3obc0ehfpsld" path="res://animations/anim7.png" id="8_2ev07"]
+[ext_resource type="Texture2D" uid="uid://xt2rxwrsrv4o" path="res://assets/Кактус.png" id="8_okej5"]
+[ext_resource type="Texture2D" uid="uid://dwujeri84dwpv" path="res://animations/anim8.png" id="9_inljc"]
+[ext_resource type="Texture2D" uid="uid://degx7vb7705o0" path="res://animations/anim9.png" id="10_5gd1f"]
+[ext_resource type="Texture2D" uid="uid://d13b03om8l6tw" path="res://assets/Банка_красная.png" id="10_gqlfi"]
+[ext_resource type="Texture2D" uid="uid://c64r6ciw54tb8" path="res://animations/anim10.png" id="11_56old"]
+[ext_resource type="Texture2D" uid="uid://x4amkg6j4bly" path="res://assets/Банка_синяя.png" id="11_445ep"]
+[ext_resource type="PackedScene" uid="uid://efmrt25arhec" path="res://house.tscn" id="11_xvy32"]
+[ext_resource type="Texture2D" uid="uid://ciay7rfq3eh43" path="res://assets/Куст.png" id="12_luivk"]
+[ext_resource type="PackedScene" uid="uid://bxsaqq54fo0iw" path="res://tree.tscn" id="12_nvwmb"]
+[ext_resource type="Texture2D" uid="uid://xgpub5eoqh8o" path="res://animations/anim3.png" id="12_xgd7a"]
+[ext_resource type="Texture2D" uid="uid://cbdk685nf21yy" path="res://animations/anim4.png" id="13_al1wi"]
+[ext_resource type="AudioStream" uid="uid://bsm3t1acuuiv6" path="res://music/28. Прибой.mp3" id="13_qk11j"]
+[ext_resource type="Texture2D" uid="uid://djpku57v4jgno" path="res://assets/Трава.png" id="13_wexdd"]
+[ext_resource type="Texture2D" uid="uid://bpj8dhxko0loc" path="res://assets/мсорка.png" id="14_8xnq1"]
+[ext_resource type="Texture2D" uid="uid://ciuxx0b5qt7wt" path="res://animations/anim5.png" id="14_dqiw3"]
+[ext_resource type="Texture2D" uid="uid://d1kpl1ws5ywfr" path="res://addons/virtual_joystick/sprites/joystick.png" id="16_vl5pi"]
+[ext_resource type="Texture2D" uid="uid://b43x5d10e5s44" path="res://addons/virtual_joystick/sprites/stick.png" id="17_q44yq"]
+[ext_resource type="Script" path="res://addons/virtual_joystick/scripts/virtual_joystick.gd" id="25_57dsr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ria21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5g5xs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vfrgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dok2p")
+}],
+"loop": true,
+"name": &"walkDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7rbnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ev07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_inljc")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_5gd1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_56old")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5g5xs")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_xgd7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_al1wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dqiw3")
+}],
+"loop": true,
+"name": &"walkUp",
+"speed": 5.0
+}]
+
+[node name="world" type="Node2D"]
+y_sort_enabled = true
+scale = Vector2(0.538425, 0.505536)
+
+[node name="Group50" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(255, -481)
+texture = ExtResource("1_fkkt6")
+
+[node name="Group49" type="Sprite2D" parent="Group50"]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(0, 1)
+
+[node name="truck" type="StaticBody2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(-926, -689)
+
+[node name="Трейлер" type="Sprite2D" parent="truck"]
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-212.506, 154.913)
+texture = ExtResource("2_do2t4")
+offset = Vector2(212.506, -154.913)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="truck"]
+polygon = PackedVector2Array(-180.932, 186.563, 207.237, -40.9183, 275.956, -27.0716, 320.53, -68.6117, 311.244, -268.4, 75.3708, -329.721, -314.656, -84.4365, -385.232, 73.8114)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="truck"]
+position = Vector2(168.279, 14.779)
+scale = Vector2(0.102593, 0.319022)
+polygon = PackedVector2Array(421.6, -7.91193, 397.84, -149.297, 500.803, -145.372, 498.214, -1.81464)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="truck"]
+position = Vector2(-19.3498, 160.848)
+scale = Vector2(0.575077, 0.586128)
+polygon = PackedVector2Array(-95.9537, 303.541, -82.4969, 257.775, -25.8368, 195.742, 25.8368, 209.241, 35.5256, 280.113, -58.0992, 312.172)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="truck"]
+position = Vector2(35.7, -4.03742)
+scale = Vector2(0.873775, 0.8125)
+polygon = PackedVector2Array(311.244, 77.7676, 322.388, 40.1837, 372.534, 4.57794, 405.965, 22.3809, 394.821, 69.8552, 342.818, 91.6143)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-436.458, -646.838)
+script = ExtResource("2_3qek0")
+
+[node name="Character" type="AnimatedSprite2D" parent="Player"]
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(91.006, 300.671)
+sprite_frames = SubResource("SpriteFrames_ria21")
+animation = &"idle"
+offset = Vector2(-68.7189, -67.2562)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(9.23722, 235.913)
+scale = Vector2(0.824542, 0.840692)
+polygon = PackedVector2Array(-54, 106, -54, -119, 80, -119, 81.1492, 106)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-358.13, -590.926)
+scale = Vector2(-110.061, 334.87)
+offset = Vector2(50, 0)
+
+[node name="virtual_joystick" type="Node2D" parent="Player"]
+z_index = 5
+position = Vector2(-172.726, 302.649)
+script = ExtResource("25_57dsr")
+border = ExtResource("16_vl5pi")
+stick = ExtResource("17_q44yq")
+
+[node name="Дорога" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(557.181, -132.533)
+texture = ExtResource("6_wbq43")
+offset = Vector2(-209.181, -323.467)
+
+[node name="Кактус" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-885, -1088)
+texture = ExtResource("8_okej5")
+
+[node name="БанкаКрасная" type="Sprite2D" parent="."]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(16.7154, -818.933)
+texture = ExtResource("10_gqlfi")
+offset = Vector2(31.2841, -33.0706)
+
+[node name="БанкаСиняя" type="Sprite2D" parent="."]
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-143.01, -824.867)
+texture = ExtResource("11_445ep")
+offset = Vector2(29.0092, -39.1329)
+
+[node name="Куст" type="Sprite2D" parent="."]
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-1129.86, -898)
+texture = ExtResource("12_luivk")
+
+[node name="grass" type="Node2D" parent="."]
+position = Vector2(-179, -635)
+
+[node name="Трава5" type="Sprite2D" parent="grass"]
+z_index = 1
+z_as_relative = false
+position = Vector2(1766, 192)
+texture = ExtResource("13_wexdd")
+
+[node name="Трава" type="Sprite2D" parent="grass"]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(32.2758, -326.356)
+texture = ExtResource("13_wexdd")
+
+[node name="Трава2" type="Sprite2D" parent="grass"]
+z_as_relative = false
+position = Vector2(-155, 162)
+texture = ExtResource("13_wexdd")
+
+[node name="Трава4" type="Sprite2D" parent="grass"]
+z_as_relative = false
+position = Vector2(-550, 274)
+texture = ExtResource("13_wexdd")
+
+[node name="Трава3" type="Sprite2D" parent="grass"]
+z_index = 1
+z_as_relative = false
+position = Vector2(1103, 345)
+texture = ExtResource("13_wexdd")
+
+[node name="Трава6" type="Sprite2D" parent="grass"]
+z_index = 1
+z_as_relative = false
+position = Vector2(405, 902)
+texture = ExtResource("13_wexdd")
+
+[node name="Трава" type="Sprite2D" parent="."]
+z_index = 6
+z_as_relative = false
+position = Vector2(-179, -635)
+texture = ExtResource("13_wexdd")
+
+[node name="trees" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(-560.895, -876.298)
+
+[node name="Дерево2" parent="trees" instance=ExtResource("12_nvwmb")]
+z_index = 0
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-74.2906, -98.9048)
+
+[node name="Дерево3" parent="trees" instance=ExtResource("12_nvwmb")]
+z_index = 5
+z_as_relative = false
+position = Vector2(189.441, 90.9929)
+
+[node name="Дерево4" parent="trees" instance=ExtResource("12_nvwmb")]
+z_index = 5
+z_as_relative = false
+position = Vector2(-967.637, 310.562)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(430.886, -577.605)
+stream = ExtResource("13_qk11j")
+volume_db = 0.936
+autoplay = true
+
+[node name="house2" parent="." instance=ExtResource("11_xvy32")]
+position = Vector2(-607.327, -1780.29)
+
+[node name="TrashCan" type="StaticBody2D" parent="."]
+position = Vector2(1233.23, -488.59)
+
+[node name="Мсорка" type="Sprite2D" parent="TrashCan"]
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+texture = ExtResource("14_8xnq1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TrashCan"]
+position = Vector2(-3.71814, -108.796)
+polygon = PackedVector2Array(-35.2916, 61.3207, -16.719, 87.036, 50.1427, 85.0579, 78.0017, 53.4084, 50.1427, 31.6493, -11.1472, 33.6274)
+one_way_collision_margin = 29.7

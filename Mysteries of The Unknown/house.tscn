@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://efmrt25arhec"]
+
+[ext_resource type="Texture2D" uid="uid://cipufy0loe73l" path="res://assets/Group 53.png" id="1_yus5t"]
+
+[node name="house" type="StaticBody2D"]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-585.04, -1802.05)
+
+[node name="Домик" type="Sprite2D" parent="."]
+z_index = 4
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(854.344, 464.856)
+texture = ExtResource("1_yus5t")
+offset = Vector2(6.65613, -531.856)
+region_filter_clip_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0.000305176, -61.3186)
+polygon = PackedVector2Array(352.881, 482.656, 859.915, 765.524, 1361.38, 468.809, 861.773, 148.357)

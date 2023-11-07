@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxsaqq54fo0iw"]
+
+[ext_resource type="Texture2D" uid="uid://b1qh18xd7tfdy" path="res://assets/ствол.png" id="1_wegrm"]
+[ext_resource type="Texture2D" uid="uid://otqya1hgey4v" path="res://assets/крона.png" id="2_4qequ"]
+
+[node name="Дерево" type="StaticBody2D"]
+z_index = 3
+position = Vector2(0, -7.91239)
+
+[node name="Ствол" type="Sprite2D" parent="."]
+z_index = 2
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-1.85727, -79.1239)
+texture = ExtResource("1_wegrm")
+
+[node name="Крона" type="Sprite2D" parent="."]
+z_index = 5
+z_as_relative = false
+position = Vector2(0, -377.817)
+texture = ExtResource("2_4qequ")
+
+[node name="ствол-кол" type="CollisionPolygon2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(2, 16.9124)
+scale = Vector2(1, 0.564655)
+polygon = PackedVector2Array(-18, -177.099, -28, -157.618, 22, -150.534, 15, -171.786)
